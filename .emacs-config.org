@@ -1,0 +1,89 @@
+* Emacs configuration file
+
+** General
+
+#+BEGIN_SRC emacs-lisp
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (## lsp-mode magit))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+#+END_SRC
+
+** Packages
+
+#+BEGIN_SRC emacs-lisp
+
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+
+#+END_SRC
+
+** Disable autosave
+
+#+BEGIN_SRC emacs-lisp
+
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+
+#+END_SRC
+
+** Modes setup
+
+#+BEGIN_SRC emacs-lisp
+
+(tool-bar-mode -1)
+(menu-bar-mode 1)
+(recentf-mode 1)
+(save-place-mode 1)
+
+#+END_SRC
+
+** Tabs setup
+
+#+BEGIN_SRC emacs-lisp
+
+(setq default-tab-width 4)
+
+#+END_SRC
+
+** Font setup
+
+#+BEGIN_SRC emacs-lisp
+
+(add-to-list 'default-frame-alist '(font . "Cousine-12"))
+(set-default-font "Cousine-12")
+
+#+END_SRC
+
+** Window position setup
+
+#+BEGIN_SRC emacs-lisp
+
+;; Set the initial frame position, width, and height
+(setq initial-frame-alist '((left . 100)   ; Position from left edge
+                            (top . 250)     ; Position from top edge
+                            (width . 220)   ; Width in characters
+                            (height . 40))) ; Height in lines
+
+
+#+END_SRC
+
+** Starting buffer setup
+
+#+BEGIN_SRC emacs-lisp
+
+(setq inhibit-startup-screen t)
+(switch-to-buffer "*scratch*")
+
+#+END_SRC
