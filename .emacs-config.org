@@ -62,7 +62,7 @@
 #+BEGIN_SRC emacs-lisp
 
 (add-to-list 'default-frame-alist '(font . "Cousine-12"))
-(set-default-font "Cousine-12")
+(set-frame-font "Cousine-12")
 
 #+END_SRC
 
