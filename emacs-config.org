@@ -71,6 +71,14 @@
 
 #+END_SRC
 
+** Difftastic for Magit setup
+
+#+BEGIN_SRC emacs-lisp
+
+(load "difftastic.el")
+
+#+END_SRC
+
 ** Window position setup
 
 #+BEGIN_SRC emacs-lisp
