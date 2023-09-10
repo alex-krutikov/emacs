@@ -84,11 +84,8 @@
 #+BEGIN_SRC emacs-lisp
 
 ;; Set the initial frame position, width, and height
-(setq initial-frame-alist '((left . 100)   ; Position from left edge
-                            (top . 250)     ; Position from top edge
-                            (width . 220)   ; Width in characters
-                            (height . 40))) ; Height in lines
 
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 #+END_SRC
 
